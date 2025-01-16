@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Login
-      run: docker login --username=wenlong@zpxt registry.cn-hongkong.aliyuncs.com -p ${PASS}
+      run: docker login --username=wenlong@zpxt registry.cn-hongkong.aliyuncs.com -p $PASS
     - name: build
       run: docker build . --file Dockerfile --tag registry.cn-hongkong.aliyuncs.com/sc-saas/node:$(date +%s)
     - name: push
